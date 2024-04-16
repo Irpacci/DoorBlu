@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:rotation="-90"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/logo" />
+
+    <Button
+        android:id="@+id/change_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Logo"
+
+        android:text="Изменить адресс"
+        android:layout_centerHorizontal="true"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <Button
+        android:id="@+id/main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/change_button"
+
+        android:text="Включить"
+        android:layout_centerHorizontal="true"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <Button
+        android:id="@+id/main_2_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_button"
+
+        android:text="Выключить"
+        android:layout_centerHorizontal="true"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <EditText
+        android:id="@+id/InputUUID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_2_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+
+        android:backgroundTint="@color/white"
+
+        android:text=""
+        android:hint="Введите UUID"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"/>
+
+    <EditText
+        android:id="@+id/InputMajor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/InputUUID"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+
+        android:backgroundTint="@color/white"
+
+
+        android:text=""
+        android:hint="Введите Major"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"/>
+
+    <EditText
+        android:id="@+id/InputMinor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/InputMajor"
+        android:ems="10"
+        android:layout_centerHorizontal="true"
+
+        android:backgroundTint="@color/white"
+
+
+        android:text=""
+        android:hint="Введите Minor"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grey"/>
+
+    <TextView
+        android:id="@+id/CurStatusLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/InputMinor"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+
+        android:text="Состояние маяка:"
+        android:textColor="@color/white"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/CurStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CurStatusLogo"
+        android:layout_centerHorizontal="true"
+
+        android:text="Неактивен"
+        android:textColor="@color/dark_red"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/CurStatus"
+        android:layout_marginTop="25sp"
+        android:layout_centerHorizontal="true"
+
+        android:text="Формат UUID: \n********-****-****-****-************\nГде '*' = a-z или 1-9 \n\nФормат Major и Minor:\nчисло от 10 до 999\nMajor меньше Minor"
+        android:textColor="@color/grey"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+</RelativeLayout>
